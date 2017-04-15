@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {}
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas">
+                您的浏览器不支持Canvas！！！
+            </canvas>
+</body>
+<script type="text/javascript">
+    var canvas = document.querySelector("#canvas");
+    var ctx = this.canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight - 10;
+
+    function FontRain(){
+        this.fonts = ["0","1","0","1","1","1","1"];
+        this.fontSizes = ["18px","24px","20px"];
+        this.columns = [];
+        this.fontW = 20;
+        this.init();
+    }
+    FontRain.prototype.init = function () {
+        var num = Math.floor(canvas.width/this.fontW);
+        for(var i=0;i<num;i++){
+            // console.log(Math.round(Math.random()*1000)-1000)
+            this.columns.push(Math.round(Math.random()*1000)-1000);
+        }
+        ctx.textAlign = "start";
+        ctx.font = "bold 20px tohma";
+        var _this = this;
+        setInterval(function(){
+            //作用域
+            _this.draw();
+        },80);
+    };
+    FontRain.prototype.draw = function(){
+        for(var i=0;i<this.columns.length;i++){
+            var font = this._randFont(this.fonts);
+            ctx.fillStyle = "#6f6";
+            if(this.columns[i]>canvas.height+50){
+                this.columns[i] = 0 ;
+            }
+            ctx.fillText(font,i*this.fontW,this.columns[i]);
+            this.columns[i]+=20;
+        }
+        ctx.fillStyle = "rgba(0,0,0,.1)";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+    };
+    FontRain.prototype._randFont = function(arr){
+        return arr[parseInt(Math.random()*(arr.length-1))]
+    };
+    new FontRain();
+    // var fonts = ["人","之","初"];
+    // ctx.font = "30px tohma";
+    // var y = 0;
+    // setInterval(function(){
+    //     ctx.fillStyle = "#6f6";
+    //     ctx.fillText(fonts[parseInt(Math.random()*(fonts.length-1))],0,y);
+    //     y+=40;
+    //     ctx.fillStyle = "rgba(0,0,0,0.1)";
+    //     ctx.fillRect(0,0,canvas.width,canvas.height);
+    // },100);
+</script>
+
+</html>
