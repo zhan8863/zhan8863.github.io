@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>51DE4869C6ACBE5BF4EA7C82627F61D6</key>
+	<array>
+		<dict>
+			<key>localURL</key>
+			<string>media/14926542541667.jpg</string>
+			<key>remoteURL</key>
+			<string>---
+layout: post
+title: gulp及常用插件配置及使用
+tags:
+- 开发
+categories: 技巧
+description: 记录gulp常用插件配置及使用方法
+---
+# gulp安装
+gulp安装分为全局安装及项目依赖安装   
+全局安装：`npm install gulp -g`    
+项目内安装：`npm install gulp-sass --save-dev`    
+安装完成后，在项目根目录创建gulpfile.js(gulp任务配置文件，必须)  
+  
+&gt;gulpfile.js
+
+```
+var gulp = require("gulp");
+gulp.task("default",function(){
+    console.log("默认任务执行");
+})
+```
+打开控制台或终端：输入`gulp`并回车
+![](github/2017-04-20-14926542541667.jpg)
+可以看到'默认任务执行'的输出，代表gulp已经成功运行    
+控制台使用gulp，则会去执行'default'任务  
+可以使用 gulp taskName 的方式去运行   
+例如：将上文中的'default'改为'test'   
+此时需要在控制输入`gulp test`
+
+# gulp常用方法
+# 插件列表
+## gulp-uglify
+## gulp-sass
+## gulp-jshint
+## gulp-rename
+## gulp-concat
+## gulp-imagemin
+## gulp-minify-css
+## gulp-livereload
+
+# 附录
+
+
+---
+layout: post
+title: gulp及常用插件配置及使用
+tags:
+- 开发
+categories: 技巧
+description: 记录gulp常用插件配置及使用方法
+---
+# gulp安装
+gulp安装分为全局安装及项目依赖安装   
+全局安装：`npm install gulp -g`    
+项目内安装：`npm install gulp-sass --save-dev`    
+安装完成后，在项目根目录创建gulpfile.js(gulp任务配置文件，必须)  
+  
+&gt;gulpfile.js
+
+```
+var gulp = require("gulp");
+gulp.task("default",function(){
+    console.log("默认任务执行");
+})
+```
+打开控制台或终端：输入`gulp`并回车
+![](github/2017-04-20-14926542541667.jpg)
+可以看到'默认任务执行'的输出，代表gulp已经成功运行    
+控制台使用gulp，则会去执行'default'任务  
+可以使用 gulp taskName 的方式去运行   
+例如：将上文中的'default'改为'test'   
+此时需要在控制输入`gulp test`
+
+# gulp常用方法
+# 插件列表
+## gulp-uglify
+## gulp-sass
+## gulp-jshint
+## gulp-rename
+## gulp-concat
+## gulp-imagemin
+## gulp-minify-css
+## gulp-livereload
+
+# 附录
+
+
+http://ooore5d82.bkt.clouddn.com/2017-04-20-14926542541667.jpg</string>
+		</dict>
+	</array>
+	<key>selectedItem</key>
+	<string>51DE4869C6ACBE5BF4EA7C82627F61D6</string>
+</dict>
+</plist>
