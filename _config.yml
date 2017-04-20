@@ -6,7 +6,7 @@ highlighter: pygments
 
 #### Permalink
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:categories/:year/:month/:day/:title
 
 #### Markdown Processors
 markdown: redcarpet
@@ -28,24 +28,26 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      
+
 #### Pagination
 paginate: 20
-
+auto: true
 #### Site
-title : Jekyll Jacman
-tagline: A fresh looking and responsive theme for Jekyll
+title : zhan8863
+tagline: 简单一点!!
 assets: /assets
-baseurl: 
+baseurl:
 
 #### Language
 language: zh-CN    ## blog site languages: en, zh-CN, zh-TW
 
 #### Menu
 menu:
-  Home: /
-  Archives: /archives
-  About: /about
+  主页: /
+  标签: /tags
+  归档: /archives
+  关于我: /about
+  类别: /categories
 ## you can create `tags` and `categories` folders (I had created them already).
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -54,7 +56,7 @@ menu:
 ## ---
 
 #### Widgets
-widgets: 
+widgets:
 - category
 - tag
 - tagcloud
@@ -65,35 +67,36 @@ widgets:
 ## provide seven widgets:github-card,category,tag,rss,archive,tagcloud,links,weibo,douban
 
 
-#### RSS 
+#### RSS
 rss: /atom.xml ## RSS address.
 
 #### Image
 imglogo:
   enable: true             ## display image logo true/false.
   src: img/logo.png        ## `.svg` and `.png` are recommended,please put image into the theme folder `/jacman/source/img`.
-favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/jacman/source/img`.     
+favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/jacman/source/img`.
 apple_icon: img/jacman.jpg ## size:114px*114px,please put image into the theme folder `/jacman/source/img`.
 author_img: img/author.jpg ## size:220px*220px.display author avatar picture.if don't want to display,please don't set this.
-banner_img: #img/banner.jpg ## size:1920px*200px+. Banner Picture
+banner_img: img/banner.jpg ## size:1920px*200px+. Banner Picture
 
-#### index post is expanding or not 
+#### index post is expanding or not
 index:
   expand: true           ## default is unexpanding,so you can only see the short description of each post.
-  excerpt_link: Read More  
+  excerpt_link: 阅读更多
 
 close_aside: false  #close sidebar in post page if true
 mathjax: true      #enable mathjax if true
 share_button: true #enable share buttons if true
 
+# <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1614757570&verifier=4d3ebf96&dpc=1"></iframe>
 #### Author information
 author:
-  name: yitao      ## e.g. wuchong Author name
-  intro_line1:  "Hello ,I'm Larry Page in Google."    ## your introduction on the bottom of the page
+  name: zhan8863      ## e.g. wuchong Author name
+  intro_line1:  "爱编程，爱生活"    ## your introduction on the bottom of the page
   intro_line2:  "This is my blog,believe it or not."  ## the 2nd line
-  weibo:      ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
-  weibo_verifier:  ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
-  tsina:      ## e.g. 2176287895  Your weibo ID,It will be used in share button.
+  weibo:      1614757570 ## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895
+  weibo_verifier:  4d3ebf96 ## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.
+  tsina:      1614757570 ## e.g. 2176287895  Your weibo ID,It will be used in share button.
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
   zhihu:      ## e.g. jark  for http://www.zhihu.com/people/jark
   email:      ## e.g. imjark@gmail.com
@@ -112,10 +115,10 @@ toc:
 ## you can set both of the value to true of neither of them.
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
-#### Links
+#### Links 友情链接
 links:
-  码农圈: https://coderq.com
-  Jark's Blog: http://wuchong.me
+  # 码农圈: https://coderq.com
+  # Jark's Blog: http://wuchong.me
 
 #### Comment
 duoshuo_shortname:    ## e.g. wuchong   your duoshuo short name.
@@ -124,7 +127,7 @@ disqus_shortname:     ## e.g. wuchong   your disqus short name.
 #### Share button
 jiathis:
   enable: false ## if you use jiathis as your share tool,the built-in share tool won't be display.
-  id:    ## e.g. 1889330 your jiathis ID. 
+  id:    ## e.g. 1889330 your jiathis ID.
   tsina: ## e.g. 2176287895 Your weibo id,It will be used in share button.
 
 #### Analytics
@@ -146,13 +149,13 @@ fancybox: true        ## if you use gallery post or want use fancybox please set
 totop: true           ## if you want to scroll to top in every post set the value to true
 
 #### Custom Search
-google_cse: 
+google_cse:
   enable: false
   cx: 018294693190868310296:abnhpuysycw  ## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
-## https://www.google.com/cse/ 
+## https://www.google.com/cse/
 ## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file
 ## set the 'front-matter' as
-## layout: search 
+## layout: search
 ## title: search
 ## ---
 baidu_search:     ## http://zn.baidu.com/
